@@ -20,6 +20,11 @@ public class Task {
         this.name = name;
     }
 
+    public Task(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public int getId() {
         return id;
     }
