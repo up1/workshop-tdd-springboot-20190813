@@ -10,8 +10,12 @@ import java.util.List;
 @Service
 public class TodoService {
 
-    @Autowired
     private TaskRepository taskRepository;
+
+    @Autowired
+    public TodoService(TaskRepository taskRepository) {
+        this.taskRepository = taskRepository;
+    }
 
     public List<TaskResponse> inquiryAll() {
         // Get data from repository
