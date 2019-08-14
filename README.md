@@ -1,4 +1,4 @@
-# workshop-tdd-springboot-20190813
+# Workshop-tdd-springboot-20190813
 
 ## [Types of Testing](https://martinfowler.com/articles/microservice-testing/)
 * Unit testing
