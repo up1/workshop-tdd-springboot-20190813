@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "c5ed891b-81ea-49b1-8f46-54eb1f322e12",
+		"name": "bay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9999/todos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d4a9f2ef-80d6-4c88-9e1f-02e9214fa3c7",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Check data\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.length).to.eql(1);",
+							"    pm.expect(jsonData[0].id).to.eql(1);",
+							"    pm.expect(jsonData[0].name).to.eql(\"Task 1\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9999/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
