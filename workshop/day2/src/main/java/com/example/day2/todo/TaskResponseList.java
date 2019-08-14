@@ -6,14 +6,33 @@ import java.util.List;
 
 public class TaskResponseList {
 
-    private List<TaskResponse> tasks;
+    private int code;
+    private String description;
+    private List<TaskResponse> results;
 
-    @JsonValue
-    public List<TaskResponse> getTasks() {
-        return tasks;
+    public int getCode() {
+        return code;
     }
 
-    public void setTasks(List<TaskResponse> tasks) {
-        this.tasks = tasks;
+    public void setCode(int code) {
+        this.code = code;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public List<TaskResponse> getResults() {
+        return results;
+    }
+
+    public void setResults(List<TaskResponse> results) {
+        this.results = results;
+    }
+
+
 }

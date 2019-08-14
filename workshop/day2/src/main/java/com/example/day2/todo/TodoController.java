@@ -16,7 +16,9 @@ public class TodoController {
         tasks.add(new TaskResponse(2, "Task 2"));
 
         TaskResponseList results = new TaskResponseList();
-        results.setTasks(tasks);
+        results.setCode(200);
+        results.setDescription("ok");
+        results.setResults(tasks);
         return results;
     }
 

@@ -27,8 +27,9 @@ public class TodoControllerSpringBootTest {
                 restTemplate.getForObject("/todos", TaskResponseList.class);
 
         // Assert
-        assertEquals(2, response.getTasks().size());
-        TaskResponse task1 = response.getTasks().get(0);
+        assertEquals(2, response.getResults().size());
+
+        TaskResponse task1 = response.getResults().get(0);
         assertEquals(1, task1.getId());
         assertEquals("Task 1", task1.getName());
     }
