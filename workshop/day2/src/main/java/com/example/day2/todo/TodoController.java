@@ -10,9 +10,13 @@ import java.util.List;
 public class TodoController {
 
     @GetMapping("/todos")
-    public List<TaskResponse> getAll() {
-        List<TaskResponse> results = new ArrayList<>();
-        results.add(new TaskResponse(1, "Task 1"));
+    public TaskResponseList getAll() {
+        List<TaskResponse> tasks = new ArrayList<>();
+        tasks.add(new TaskResponse(1, "Task 1"));
+        tasks.add(new TaskResponse(2, "Task 2"));
+
+        TaskResponseList results = new TaskResponseList();
+        results.setTasks(tasks);
         return results;
     }
 
